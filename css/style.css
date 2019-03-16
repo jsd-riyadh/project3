@@ -12,42 +12,8 @@ html,body{
     left: 0;
     border-bottom-left-radius: 30px;
     border-bottom-right-radius: 30px;
-    box-shadow: 0px 2px 4px #2C3E50;
-    
-    
+    box-shadow: 0px 2px 4px #2C3E50;   
 }
-.to_do_list{
-    background-image: url("../resources/to_do_list.jpeg");
-    position: absolute;
-    width: 40%;
-    height:30%;
-    top: 15%;
-    border-radius: 30px;
-    height: 40%;
-    width: 40%;
-    box-shadow: 0px 2px 4px #2C3E50;
-}
-#input{
-    background-image: url("../resources/ribbon_background.jpeg");
-    position:absolute;
-    border-top-left-radius: 30px;
-    width: 85%;
-    height: 15%;
-    border: none;
-    text-align: center;
-    box-shadow: 0px 2px 4px #2C3E50;
 
-}
-#add{
-    background-image: url("../resources/ribbon_background.jpeg");
-    position:absolute;
-    border-top-right-radius: 30px;
-    width: 14%;
-    height: 15.4%;
-    border:none;
-    right: 0;
-    text-align: center;
-    box-shadow: 0px 2px 4px #2C3E50;
 
-}
 

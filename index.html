@@ -6,7 +6,7 @@
     <title>DevTool</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="/css/style.css">
-    <script src="/js/main.js"></script>
+    <link rel="stylesheet" type="text/css" media="screen" href="/css/to_do.css">
 </head>
 <body>
     <div class="page">
@@ -14,12 +14,31 @@
         <div class = "ribbon"></div>
    
         <div class = "to_do_list">
-            <div class= "container" id="to_do_container">
-                <input type="text" placeholder="Enter an activity.." id="input">
+            <header>
+                <input type="text" placeholder="Enter an activity.." id="item">
                 <button id="add">Submit</button>
-            </div>
+            </header>
+            
+                <div class = "container">
+                     
+                    <ul style="list-style: none;" class="undone" id="undone"> 
+                        <div class="list_container">
+                            <li>This is an item
+                                <div class="button_container">
+                                    <button class="list_button" id="trash_button"></button>
+                                    <button class="list_button" id="check_button"></button>
+                                </div>
+                            </li>
+                        </div>
+                    </ul>
+                </div>
+        </div>
+            
+
+            
 
         </div>
     </div>
+<script src="/js/to_do.js"></script>
 </body>
 </html>
