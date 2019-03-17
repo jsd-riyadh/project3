@@ -37,8 +37,8 @@ header input{
     box-shadow: none;
     outline: none;
 }
-header button{
-    background: none;
+#add{
+    background-image: url("../resources/dark_bage.jpeg");
     position:absolute;
     border-top-right-radius: 30px;
     width: 20%;
@@ -52,7 +52,7 @@ header button{
     font-size: 20px;
     cursor: pointer;
 }
-header button:before{
+#add:before{
     content: '';
     width: 2px;
     height : 100%;
@@ -60,8 +60,6 @@ header button:before{
     background: #2b2626;
     top:0;
     left:0;
-
-
 }
 .container {
    
@@ -82,14 +80,12 @@ header button:before{
     left:0px;
     border:none;
 }
-.list_container {
-    position:absolute;
-    box-shadow: 0px 2px 4px #2C3E50;
+li {
+    position: relative;;
     border-bottom-left-radius: 30px;
     border-top-left-radius: 30px;
     width: 68%;
     height: 20%;
-    top:0px;
     left:0px;
     padding-left: 5%;
 }
@@ -101,7 +97,16 @@ header button:before{
     left: 101%;
     border-top-right-radius: 30px;
     border-bottom-right-radius: 30px;
-    box-shadow: 0px 2px 4px #2C3E50;
+    
+}
+.button_container:before{
+    content: "";
+    width: 2px;
+    height : 100%;
+    position: absolute;
+    background: #2b2626;
+    top:0px;
+    left:0px;
 }
 .list_button{
     position: relative;
@@ -116,9 +121,6 @@ header button:before{
     background-size: 100%;
     background-position: center;
     height: 100%;
-    
-    
-    
 }
 
 #check_button{
@@ -130,15 +132,15 @@ header button:before{
     
    
 }
-#check_button:before{
-    content: '';
+/* #check_button:before{
+    content: "";
     width: 2px;
     height : 100%;
     position: absolute;
     background: #2b2626;
     top:0px;
     left:0px;
-}
+} */
 
 
 
