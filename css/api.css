@@ -61,6 +61,23 @@
     cursor: pointer;
     max-width: 100%;
   }
+  #save{
+    background-image: url("../resources/dark_bage.jpeg");
+    left:39%;
+    position:absolute;
+    border-radius: 30px;
+    width: 20%;
+    height: 100%;
+    border:none;
+    text-align: center;
+    box-shadow: 0px 0px 4px 0px #2C3E50;
+    box-shadow: none;
+    outline: none;
+    font-size: 20px;
+    cursor: pointer;
+    max-width: 100%;
+   
+  }
   #before:before{
     content: '';
     width: 2px;

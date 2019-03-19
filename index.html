@@ -16,21 +16,23 @@
    <!-- This is for the to do list -->
         <div class = "to_do_list">
             <header>
-                <input type="text" placeholder="Enter an activity.." id="item">
-                <button id="add">Submit</button>
+                <form>
+                    <input type="text" placeholder="Enter an activity.." id="item">
+                    <button id="add">Submit</button>
+                </form>
             </header>
             
             <div class = "container">
                      
                 <ul style="list-style: none;" class="undone" id="undone"> 
-                    <li>place_holder
+                    <li>Task1
                         <div class="button_container">
                             <button class="list_button" id="trash_button"></button>
                             <button class="list_button" id="check_button"></button>
                         </div>
                     </li>
 
-                    <li>place_holder
+                    <li>Task2
                         <div class="button_container">
                             <button class="list_button" id="trash_button"></button>
                             <button class="list_button" id="check_button"></button>
@@ -45,6 +47,7 @@
         <div class="api">
                 <header>
                         <button class="nav" id="before">Before</button>
+                        <button class="nav" id="save">Download</button>
                         <button class="nav" id="next">Next</button>
                 </header>
                 <article class="article">
@@ -61,12 +64,29 @@
         </div>
     </div>
 <!-- The Scripts -->
+<!-- <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+<script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBijnks0OJ0YqNDi_Axk7-TAaxOkPRnHj4",
+    authDomain: "news-collector-4e311.firebaseapp.com",
+    databaseURL: "https://news-collector-4e311.firebaseio.com",
+    projectId: "news-collector-4e311",
+    storageBucket: "",
+    messagingSenderId: "874064541229"
+  };
+  firebase.initializeApp(config);
+</script> -->
+
 <script
   src="https://code.jquery.com/jquery-3.3.1.min.js"
   integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
   crossorigin="anonymous"></script>
 <script src="/js/to_do.js"></script>
 <script src="js/api.js"></script>
+<script src="js/database.js"></script>
 
 </body>
 </html>
