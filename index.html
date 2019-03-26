@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Bashayer's Book DataBase</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles/normalize.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/html5bp.css" media="screen" charset="utf-8">
+    <link rel="stylesheet" href="styles/style.css" media="screen" charset="utf-8">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    
+</head>
+<body>
+    <header>
+        <section class="container">
+          <a href="#"><h1>Favorite Quotes</h1></a>
+           <!-- <nav>
+            <ul>
+              <li><a href="#"><span>Source Name</span></a>
+                 <ul>
+                    <li><a class="source1" href="#">News API</a></li>
+                    <li><a class="source2" href="#">The New York Times</a></li>
+                    
+                </ul>
+              </li>
+            </ul>
+             <input id="search">
+               
+              <input  type="text" id="searchQuerey" name="name" value="">
+            
+            </section>
+          </nav> -->
+          <section id="search">
+          <input class="search"/>
+          <a href="#"><img src="images/search.png" alt="" /></a> 
+        </section>
+          <div class="clearfix"></div>
+        </section>
+      </header>
+
+      <div id="add">
+        <button class="add" >New Quote</button> 
+      </div>
+      <div id="popUp" class="loader hidden">
+        <a href="#" class="closePopUp">X</a>
+       
+        <div class="container">
+          
+          <div class="res-container">
+          
+          
+          </div>
+          <q> Add your favorite Quote.</q>
+                    <input class="comment" type="text" name="name" placeholder="your comment">
+                    <input type="hidden" name="idvalue" hidden>
+                    <button class="submit" >Submit</button>
+                    <button class="update" style="display:none" >update</button>
+               
+        </div>
+      </div>
+      
+      
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyBu29rhHafSt9t6ww_hpwS5HjE1P2cP85g",
+        authDomain: "crud-project-c4fc0.firebaseapp.com",
+        databaseURL: "https://crud-project-c4fc0.firebaseio.com",
+        projectId: "crud-project-c4fc0",
+        storageBucket: "",
+        messagingSenderId: "761231952073"
+      };
+      firebase.initializeApp(config);
+    </script>
+      <section id="main" class="container">
+       
+      </section>
+    
+</body>
+<script src="app.js"></script>
+</html>
