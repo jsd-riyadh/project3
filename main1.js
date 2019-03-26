@@ -99,7 +99,7 @@ function handler(e) {
             //class name
             list.className = "gameBox"
             //add face image
-            image.src = "image/think.jpg"
+            image.src = "https://i.imgur.com/BCr69ZX.jpg"
         }
 
     }
