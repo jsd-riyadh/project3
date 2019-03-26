@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Bill Tracker</title>
+    <link rel="stylesheet" type="text/CSS" media="screen" href="index.css">
+
+    <!--  -->
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link rel="stylesheet" href="/resources/demos/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+
+    </script>
+
+</head>
+
+<body>
+    <div class="res-container">
+
+        <div class="top">
+            <!-- will have the title and summary  -->
+            <h1> Bill Tracker</h1>
+        </div>
+
+        <div class="main">
+            <!-- will have the input fields  -->
+            <p>Bill Amount: <input type="text" name="amount" id="amount"> </p>
+            <p>Bill Date: <input type="text" name="date" id="datepicker"></p>
+            <button class="add"> Add </button>
+
+        </div>
+        <table>
+            <thead>
+                <th>Amount</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </thead>
+            <tbody class="tbl">
+
+            </tbody>
+        </table>
+
+        <div class="api">
+            <h1>Currency Daily Rate</h1>
+            <h3>Based Currency: Eur € </h3>
+        </div>
+  
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.5/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyDNs7cTJ0q0aXU-7WcxGL9mmyAmvbBNh5w",
+                authDomain: "bill-db.firebaseapp.com",
+                databaseURL: "https://bill-db.firebaseio.com",
+                projectId: "bill-db",
+                storageBucket: "bill-db.appspot.com",
+                messagingSenderId: "275679734705"
+            };
+            firebase.initializeApp(config);
+        </script>
+
+        <script src="index.js"></script>
+</body>
+
+</html>
