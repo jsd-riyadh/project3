@@ -2,84 +2,56 @@
 
 ### Overview
 
-For the final project, you'll be designing and building a web app of your choice. This project will test your knowledge of JavaScript and ask you to apply everything you've learned in this course. The result will be a web app that you can add to your portfolio. You could create anything from: a blog users can comment on; an app that allows users to search for social media posts; or even an application that logs users geolocations. Work with your instructor to create project goals that are realistic given the scope and timing of the class.
+The Weather NoteApp Application is aim to writes a weather notes for the Current Weather status 
+paramters that retrieved from https://openweathermap.org/api API which are 
+(temperature, wind, humditiy) and store the typed Notes on the database including the 
+retrieved parameters from API using Firebase and you can edit or delete 
+the notes it self as you want. 
 
 ---
 
 ### Technical Requirements
 
-- Use JavaScript to correctly structure the code for a web application:
-  - Structure your application to be a SPA (single page application)
-  - Make HTTP requests to your own Firebase URL
-  - Make at least one HTTP request to a third-party server
-  - CRUD functionality should be present
-  - Use either vanilla JS or jQuery to perform DOM manipulation
-  - Listen for events and add interactivity based on user input
+- The implementation done by the follwoing steps: 
+  - 1- Search for suitable design and this link "https://cosmicjs.com/apps/todo-app/demo" 
+     was helpful in getting the suitable theme,the main library i used 
+     and i learned from it was bootstrap library which is a public library from twitter for free.
+
+  - 2- after finishing the desgin, I start implement the add/edit/delete forms (CRUD) 
+     in addition to the list of notes  and prepare to store the data from add/edit forms into
+     he database (firebase) using the following scripts:
+     <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyBhu-3Vbxxo9LiEvED-x7ErKxBEZIzlpeg",
+            authDomain: "notes-42a6b.firebaseapp.com",
+            databaseURL: "https://notes-42a6b.firebaseio.com",
+            projectId: "notes-42a6b",
+            storageBucket: "notes-42a6b.appspot.com",
+            messagingSenderId: "471974223990"
+          };
+          firebase.initializeApp(config);
+        </script>
+      and also i got a help in implementing the code from this reference:
+      https://softauthor.com/learn-to-build-firebase-crud-app-with-javascript-part01-reading-data/
+
+  - 3- Now its time to implement the weather widges from a public API 
+      "https://openweathermap.org/api" as the following:
+
+      A- Sign up to the website and I recieve an email containing API key and endpoint
+
+      B- the waether API provide a city list of the cities ID, so I can chanege the ID sent to API easily.
+          
+      C- The Url Calling is like this  "http://api.openweathermap.org/data/2.5/weather?id=102358&APPID=8c6d73486a4a9e184a4e3d4caf2e8d4d" 
+      which the id means the city Id that i get from city.list.json file and APPID is the API Key.
+                
+      D- Calling the weather API in weather.js file and the API will retrieve json result and 
+      will be fetch the needed data insdie the element in html page using jquery.
+      
+      E- Calling the weather API when click on Adding the note to store (temperature, wind, humditiy) 
+      in addition to title and description inside the database for each note submitted.
 
 - Hosting
-  - App must be hosted on either GitHub Pages or Heroku
+  - hosted by Github 
 
-#### Bonus / Best Practices
-
-  Your instructor will provide feedback on how well you execute best practices. Even though it is not part of the requirements, you should keep these in mind:
-
-  - __Clean And Readable Code__. The instructor should be able to read and follow your code easily.  Maintain clean and readable code including: consistent indentation, code commenting and use of proper and consistent naming conventions.
-
-  - __Object Oriented and/or Functional__. Implement function closures, keep code modular, maintain a separation of concerns, only put code on the global scope when absolutely necessary, use prototypical or class inheritance.
-
----
-
-### SPA Architecture
-
-Single Page Applications (SPA) are all the rage today. The single page aspect of a SPA refers to a single page coming from the server, such as our _index.html_ page.  Once loaded, the SPA changes views by using _client-side_ routing, which loads partial HTML snippets called templates. Think back to our _Advanced APIs_ lesson where we showed specific views based off the login state of a user. The goal for you implementing a SPA is to not make users have to refresh the entire DOM every time they need a new piece of data to be represented in the UI.
-
-![spa_architecture](https://cloud.githubusercontent.com/assets/25366/8970635/896c4cce-35ff-11e5-96b2-ef7e62784764.png)
-
----
-
-### Necessary Deliverables
-
-* A **production ready web application**, SPA, hosted live on the web.
-* A  **new git repository hosted on Github** where codebase is maintained.
-* A 5-10 minute **presentation** including 3 technical hurdles, 2 new things you learned, Q&A.
-
----
-
-### Suggested Ways to Get Started
-
-- Think of a problem in the world, or even in your personal life, and apply what you've learned to build an application that can help solve the issue.
-- Research different social media APIs (i.e. twitter) and see what kind of information you can use from them.
-- Look at different online [video games](http://phaser.io/examples) for inspiration.
-
----
-
-### Potential Project Ideas
-
-##### Idea 1
-Movie forum site where users can post their favorite movies and rate them.
-
-##### Idea 2
-Celebrity follower app that allows users to easily pull all social media data from their favorite celebrities.
-
-##### Idea 3
-Friend locator site that allows users to see how far away they are from their friends.
-
----
-
-### Project Feedback + Evaluation
-
-* __Technical Requirements__: Did you deliver a project that met all the technical requirements? Given what the class has covered so far, did you build something that was reasonably complex?
-
-* __Creativity__: Did you added a personal spin or creative element into your project submission?
-
-* __Code Quality__: Did you follow code style guidance and best practices covered in class, such as tab indentation, DRYness, and semantic naming? Did you comment your code?
-
-* __Problem Solving__: Are you able to defend why you implemented your solution in a certain way?
-
-* __Total__: Your instructor will give you a total score on your project between:
-
-    Score | Expectations
-    ----- | ------------
-    **0** | _Does not meet expectations._
-    **1** | _Meets expectactions, good job!_
-    **2** | _Exceeds expectations, you wonderful creature, you!_

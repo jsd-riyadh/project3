@@ -1,0 +1,49 @@
+The NoteApp Application is aim to writes a note  and store it on database using Firebase and you can edit or delete the notes.
+In addition, a https://openweathermap.org/api is used to display the current temerature, wind, humditiy as a type of changing the mood while typing the notes. 
+
+
+The implementation done by the follwoing steps: 
+1- Search for suitable design and this link "https://cosmicjs.com/apps/todo-app/demo" was helped me in getting the suitable theme,
+ the main library i used and i learned from it is bootstrap library which is a public library from twitter and we can use it as free.
+ 
+ 
+2- after finishing the desgin, I start implement the add/edit/delete forms (CRUD) to store it on the database (firebase) in addition to the list of notes using the following scripts:
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBhu-3Vbxxo9LiEvED-x7ErKxBEZIzlpeg",
+    authDomain: "notes-42a6b.firebaseapp.com",
+    databaseURL: "https://notes-42a6b.firebaseio.com",
+    projectId: "notes-42a6b",
+    storageBucket: "notes-42a6b.appspot.com",
+    messagingSenderId: "471974223990"
+  };
+  firebase.initializeApp(config);
+</script>
+
+and also i got a help in implementing the code from this reference https://softauthor.com/learn-to-build-firebase-crud-app-with-javascript-part01-reading-data/
+
+3- Now its time to implement the weather widges from a public API "https://openweathermap.org/api" as the following:
+		A- Sign up to the website and I recieve an email containing API key and endpoint as the following :
+				 API key:
+					- Your API key is 8c6d73486a4a9e184a4e3d4caf2e8d4d
+					- Within the next couple of hours, it will be activated and ready to use
+					- You can later create more API keys on your account page
+					- Please, always use your API key in each API call
+
+				Endpoint:
+					- Please, use the endpoint api.openweathermap.org for your API calls
+					- Example of API call:
+					api.openweathermap.org/data/2.5/weather?q=London,uk&APPID=8c6d73486a4a9e184a4e3d4caf2e8d4d
+	
+	    B- the waether API provide a city list of the cities ID, so I can chanege the ID sent to API easily.
+		
+		C- The Url Calling is like this  "http://api.openweathermap.org/data/2.5/weather?id=102358&APPID=8c6d73486a4a9e184a4e3d4caf2e8d4d" which the id means the city Id that i get from city.list.json file and APPID is the API Key.
+					
+		D- Calling the weather API in weather.js file and the API will retrieve json result and will be fetch the needed data insdie the element in html page using jquery.
+		
+
+		
+
+

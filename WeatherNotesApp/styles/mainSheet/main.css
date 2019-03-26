@@ -1,0 +1,91 @@
+h1 {
+    color: lightblue;
+}
+
+h2 {
+    color: blue;
+}
+
+#header input {
+        color: #000;
+    background: white;
+}
+
+@media screen and (max-width: 480px) and (orientation: portrait) {
+    input[type="submit"], input[type="reset"], input[type="button"], button, .button {
+        padding-top: 0;
+        padding-right: 1.75em;
+        padding-bottom: 0;
+        padding-left: 1.75em;
+    }
+}
+
+img {
+    width: 28px;
+    height: 28px;
+}
+
+#submitbtn{
+	
+	float:right;
+}
+
+#header {
+	z-index: 0;
+    position: relative;
+    background-image: none;
+    background-attachment: scroll;
+    background-size: auto;
+    background-image: url('../Note.jpg');
+}
+
+.mbr-overlay {
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    opacity: .5;
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: 0;
+}
+
+
+.tableContent{
+	    text-align: left;
+	
+}
+
+
+.HyperLinkDesign
+{
+	color:gray;
+	cursor:pointer;
+	
+}
+
+.glyphicon{
+	
+	    display: table-cell !important;
+}
+.boldRow{
+	font-size: 0.9em;
+    font-weight: bold;
+	padding: 0 0.75em 0.75em 0.75em;
+    text-align: left;
+	color: #828282
+	
+}
+
+
+#updatebtn,#closebtn{
+	float:right;
+	
+}
+#updatebtn{
+	    background-color: #149dcc;
+    
+    border: none !important;
+    color: #ffffff !important;
+	
+}
