@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Favorite List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+    <header>
+    </header>
+    <div class="popUp">
+        <span class="helper"></span>
+        <div class="container">
+            <div class="popupCloseButton">X</div>
+
+            <h5>What are you search for?</h5>
+
+            <input class="title" name="title" type="text" placeholder="search" />
+            <button class="submit" type="submit">submit</button>
+            <button class="submit1" type="submit">submit</button>
+            <button class="submit2" type="submit">submit</button>
+            <div class="here"></div>
+        </div>
+    </div>
+
+
+
+    <h1>Favorites</h1>
+    <div class="movies">
+        <h2>Movies
+            <span><a class="search" href="#"><img src="imges/searching-magnifying-glass.png" alt="" /></a></span>
+        </h2><br />
+        <ul class="favMovies"></ul>
+    </div>
+    <div class="books">
+        <h2>Books <span><a class="search1" href="#"><img src="imges/searching-magnifying-glass.png" alt="" /></a></span>
+        </h2> <br />
+        <ul class="favBooks"></ul>
+    </div>
+    <div class="music">
+        <h2>Music <span><a class="search2" href="#"><img src="imges/searching-magnifying-glass.png" alt="" /></a></span>
+        </h2> <br />
+        <ul class="favMusic"></ul>
+
+    </div>
+
+
+
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCI-nPL2kyQD2J2xhLBiTlFMOIl0IS4b-c",
+        authDomain: "favoriteswebpage.firebaseapp.com",
+        databaseURL: "https://favoriteswebpage.firebaseio.com",
+        projectId: "favoriteswebpage",
+        storageBucket: "favoriteswebpage.appspot.com",
+        messagingSenderId: "239856386510"
+    };
+    firebase.initializeApp(config);
+</script>
+<script src="main.js"></script>
+
+</html>
