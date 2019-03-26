@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script
+      src="http://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>One Hour</title>
+  </head>
+
+  <body>
+    <div id="main">
+      <div class="container" id="welcome">
+        <h1>
+          You might spend a year learning new things,<br />
+          but you can catch most of that in one hour!
+        </h1>
+      </div>
+      <div class="progress">
+        <div
+          class="progress-bar progress-bar-striped progress-bar-animated"
+          id="countdown"
+          role="progressbar"
+          aria-valuenow="100"
+          aria-valuemin="0"
+          aria-valuemax="100"
+          style="width: 100%"
+        >60 Minutes</div>
+      </div>
+      <br />
+      <div class="responsive-video">
+        <iframe src="https://www.youtube.com/embed/8jPQjjsBbIc"></iframe>
+      </div>
+      <button id="nextVideo" type="button" class="btn btn-success">
+        Next Video
+      </button>
+      <div id="comments" class="form-group">
+        <label for="exampleFormControlTextarea1"></label>
+        <textarea
+          class="form-control"
+          id="textInput"
+          rows="7"
+          placeholder="Share Your Thoughts Here"
+        ></textarea>
+        <button id="share" type="button" class="btn btn-success">
+          Share
+        </button>
+      </div>
+      <table id="dataTable" class="table table-striped table-dark">
+        <thead>
+          <tr>
+            <th  scope="col"><h3>Lessons Learned</h3></th>
+            <th id="actions" scope="col"><h3>Actions</h3></th>
+          </tr>
+        </thead>
+      </table>
+    </div>
+  </body>
+  <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyAvCUaBqTRW4Xbl3l0R7H1V629XFws0t-A",
+      authDomain: "onehour.firebaseapp.com",
+      databaseURL: "https://onehour.firebaseio.com",
+      projectId: "onehour",
+      storageBucket: "",
+      messagingSenderId: "101693153245"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="styles.css" />
+</html>
