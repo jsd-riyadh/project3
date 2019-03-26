@@ -282,21 +282,23 @@ document.querySelector('.chartPerformance').addEventListener('click', e => {//he
                     }
                     
                 })
-                    let crossx = document.querySelector('.cross') //ther is some bugs need to fixed 
+                    let crossx = document.querySelectorAll('.cross') 
                     let lists = document.querySelector('#flibsCollectoin')
                     if(crossx){
-                        crossx.addEventListener('click', e => {
-                            if(e.target.className == 'cross'){
+                        Array.from(crossx).forEach(el => {
+                        el.addEventListener('click', e => {
+                            // if(e.target.className == 'cross'){
                                 e.stopPropagation();
                                 let id = e.target.parentElement.getAttribute('data-id');
                                 let lii = e.target.parentElement
                                 console.log(lii,id)
                                 db.collection('chart').doc(id).delete();
                                 lists.removeChild(lii)
-                            }
+                            // }
                                 
                                 
                         })
+                    })
                     }
                 
             });
