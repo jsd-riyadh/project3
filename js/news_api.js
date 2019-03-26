@@ -1,6 +1,8 @@
-var main_url = "https://accesscontrolalloworiginall.herokuapp.com/https://newsapi.org/v1/articles?";
-    // https://newsapi.org/v2/top-headlines?country=us&apiKey=8870c787b3904854bfcb207e29d0f65e
+var main_url = "https://newsapi.org/v1/articles?";
+// let u2 = "https://newsapi.org/v2/top-headlines?country=us&apiKey=8870c787b3904854bfcb207e29d0f65e"
 
+    // https://newsapi.org/v2/top-headlines?country=us&apiKey=8870c787b3904854bfcb207e29d0f65e
+  //https://accesscontrolalloworiginall.herokuapp.com/
     $("#cnn_view").on("click",function(){
         
         $("#cnn_back").toggle()
@@ -17,7 +19,6 @@ var main_url = "https://accesscontrolalloworiginall.herokuapp.com/https://newsap
        $.ajax({
          type: 'GET',
          url : url,
-         contentType : "json",
         success: function(data){
            var data1 = data.articles
            
@@ -102,7 +103,6 @@ var source = "&source=bbc-news&sortBy=top&";
    $.ajax({
      type: 'GET',
      url : url,
-     contentType : "json",
     success: function(data){
        var data1 = data.articles
 
@@ -187,7 +187,6 @@ var source = "&source=ign&sortBy=top&";
    $.ajax({
      type: 'GET',
      url : url,
-     contentType : "json",
     success: function(data){
        var data1 = data.articles
 

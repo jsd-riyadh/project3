@@ -1,3 +1,19 @@
+$('document').ready(function(){
+
+// var config = {
+//     apiKey: "AIzaSyBIr57wZoMZAvNfZaDibuXwj2Ec1H0FnHw",
+//     authDomain: "todolist-2119f.firebaseapp.com",
+//     databaseURL: "https://todolist-2119f.firebaseio.com",
+//     projectId: "todolist-2119f",
+//     storageBucket: "todolist-2119f.appspot.com",
+//     messagingSenderId: "869364570942"
+//   };
+//   firebase.initializeApp(config);
+  
+//   var database = firebase.database();
+//   var ref = database.ref('todolist');
+
+//   console.log(ref)
 
 var data 
  if(localStorage.getItem('todolists')){
@@ -51,6 +67,8 @@ function todolistdata(){
 // This function updates the local storage by setting items in json format
 function dataUpdate(){
     localStorage.setItem('todolists',JSON.stringify(data));
+    // ref.push(data)
+
 }
 document.getElementById("todo_add").addEventListener("click", function(){
     
@@ -304,7 +322,7 @@ function complete_card(){
 
     }
 
-
+});
 
 
    
