@@ -8,6 +8,9 @@ $(function() {
     countdown--;
     realTime = countdown * 1.6;
     $("#countdown").attr(`style`, `width:${realTime}%`);
+    $("#countdown").empty();
+    $("#countdown").append(`${countdown} Minutes`);
+
   }, 60000);
 
   // Here we retrieve the previous comments from database
