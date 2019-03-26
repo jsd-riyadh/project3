@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>TV SHOW STATION</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+        <div id ="suc" class="alert alert-success" style="display:none; position: fixed; z-index: 9999; width: 100%;">
+                <div class="container">
+                  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                
+                  </button>
+                  <b>Success:</b> show has been added
+                </div>
+              </div>
+              <div id ="err" class="alert alert-danger" style="display:none; position: fixed; z-index: 9999; width: 100%;">
+                    <div class="container">
+                      <div class="alert-icon">
+                      </div>
+                      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                        
+                      </button>
+                      <b>Error:</b> it is already there
+                    </div>
+                  </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <header>
+                    <img class="img-responsive" id="img1" src="https://i.imgur.com/NRxTH0a.jpg?1" width="100">
+            </div>
+            <div class="col-md-4">
+                <h1>TV SHOWS STATION</h1>
+                <a href="fav.html" class="btn btn-warning"> TO WATCH LIST</a>
+                <!-- <button style="text-align:center; color: black;"> <a href="fav.html">TO WITCH LIST</a> </button> -->
+            </div>
+            <hr>
+            </header>
+        </div>
+        
+        <div class="row">
+            <div class="col-md-12">
+                <hr>
+            </div>
+        </div>
+        <div class="row" >
+            <div class="col-md-12">
+                <img class="img-responsive" id="img2" src="img/hd0081.gif" width="200%">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <p id="firsth"> SHOWS</p>
+            </div>
+        </div>
+       
+        
+        <div class="row" id="list1">
+            
+        </div>
+        <div class="row" id="list2">
+            
+        </div>
+        <div class="row" id="list3">
+            
+        </div>
+        <div class="row" id="list4">
+           
+        </div>
+        <div class="row" id="list5">
+          
+        </div>
+        <div class="row" id="list6">
+          
+            </div>
+        </div>
+        <hr>
+        <div class="row">
+            <div class="col-md-4">
+
+
+
+
+
+            </div>
+            <div class="col-md-4">
+
+
+
+
+
+            </div>
+            <div class="col-md-4">
+                <p class="float-right">
+                    <a href="#" id="her">Back to top</a>
+                </p>
+
+
+
+
+            </div>
+        </div>
+  
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+        
+        
+<!-- <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script> -->
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBeINp0F1deke1_CJMXZq-3VfUkOeKhH1k",
+    authDomain: "tv-shows-station.firebaseapp.com",
+    databaseURL: "https://tv-shows-station.firebaseio.com",
+    projectId: "tv-shows-station",
+    storageBucket: "tv-shows-station.appspot.com",
+    messagingSenderId: "392098363603"
+  };
+  firebase.initializeApp(config);
+</script>
+<script src="app.js"></script>
+</body>
+
+</html>
