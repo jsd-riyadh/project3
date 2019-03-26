@@ -28,7 +28,7 @@ $(function () {
                     <td> ${res.doc.data().lat} </td>
                     <td> ${res.doc.data().long}  </td>
                     <td data-id="${res.doc.id}"> 
-                        <button class="edit btn btn-default btn-sm"> edit </button> 
+                        // <button class="edit btn btn-default btn-sm"> edit </button> 
                         <button class="delete btn btn-success btn-sm"> Done </button> 
                     </td>
                 </tr>`)
@@ -82,7 +82,7 @@ $(function () {
                     <td> ${lat} </td>
                     <td> ${long}  </td>
                     <td data-id="${res.id}"> 
-                        <button class="edit btn btn-default btn-sm"> edit </button> 
+                        // <button class="edit btn btn-default btn-sm"> edit </button> 
                         <button class="delete btn btn-success btn-sm"> Done </button> 
                     </td>
                 </tr>`)
