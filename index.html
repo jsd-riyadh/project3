@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="main.css" />
+    <title>Book World</title>
+</head>
+
+<body>
+    <header>
+        <h2>Book World <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTBmQJgmQwkbgd1k2V7AZqT8crHI1obnjD-gC6EWD2CgJcXaYIWww"
+                alt="books" id="headerImg">
+        </h2>
+    </header>
+
+    <div id="tabButtons">
+        <button class="tablink" onclick="openPage('myBooks', this, 'rgb(157, 167, 157)')" id="defaultOpen">My
+            Books</button>
+        <button class="tablink" onclick="openPage('booksToBuy', this, 'rgb(76, 175, 109)')">Books to Buy</button>
+        <button class="tablink" onclick="openPage('searchForABook', this, 'rgb(124, 188, 231)')">Search for a
+            Book</button>
+
+    </div>
+
+
+
+    <div id="myBooks" class="tabcontent">
+        <div class="container">
+            <div class="formcontainer">
+                <h3>My Books</h3>
+
+                <div class="myBooksContainer">
+                    <div class="row">
+                        <div class="w-50">
+                            <input type="text" name="bookName" placeholder="Name of book">
+                        </div>
+                        <div class="w-50">
+                            <input type="text" name="authorName" placeholder="Name of author">
+                            <input type="hidden" name="editedId" placeholder="editedId">
+
+                        </div>
+                    </div>
+
+
+                    <button class="addToMyBooks">add to my books</button>
+                    <button class="updateMyBook">Update my book</button>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <div id="booksToBuy" class="tabcontent">
+        <div class="container">
+            <div class="formcontainer">
+                <h3>Books To Buy</h3>
+
+                <div class="booksToBuyContainer">
+                    <div class="row">
+                        <div class="w-50">
+                            <input class="toBuyBookName" type="text" name="bookName" placeholder="Name of book">
+                        </div>
+                        <div class="w-50">
+                            <input class="toBuyAuthorName" type="text" name="authorName" placeholder="Name of author">
+                            <input type="hidden" name="editedId" placeholder="editedId">
+
+                        </div>
+                    </div>
+
+                    <button class="addToBooksToBuy">add to books to buy</button>
+                    <button class="updateBookToBuy">Update book to buy</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div id="searchForABook" class="tabcontent">
+        <div class="container">
+            <h3>Search for a book</h3>
+            <input id="searchField" placeholder="Book Title">
+            <button id="search" type="button">Search</button>
+            <div id="searchResults"></div>
+
+
+        </div>
+    </div>
+
+
+
+    <script>
+        function openPage(pageName, elmnt, color) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablink");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].style.backgroundColor = "";
+            }
+            document.getElementById(pageName).style.display = "block";
+            elmnt.style.backgroundColor = color;
+        }
+
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyDKPnKmKgtQRvtrstebPe7HkFt3ZcBqC-8",
+            authDomain: "book-world-234321.firebaseapp.com",
+            databaseURL: "https://book-world-234321.firebaseio.com",
+            projectId: "book-world-234321",
+            storageBucket: "",
+            messagingSenderId: "201184999051"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <script src="main.js"></script>
+</body>
+
+</html>

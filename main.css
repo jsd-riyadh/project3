@@ -1,0 +1,70 @@
+header{ background-color: rgba(255, 187, 0, 0.712); color:rgb(255, 255, 255); padding: 10px; text-align: center;}
+#headerImg{height: 90px; width: 90px; vertical-align:middle}
+.row { margin-right: -15px; margin-left: -15px;}
+.w-50{ width: 50%; float: left;}
+.container{ width: 80%; margin: 20px auto; }
+input{display: block; width: 100%;
+    height: 34px;padding: 6px 12px;
+    font-size: 14px; line-height: 1.42857143;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;}
+li{ padding: 10px 20px; list-style: none; }
+
+/* Stylyng the buttons in the content of each tab */
+button{ text-align: center; border: 1px solid transparent;padding: 6px 12px;font-size: 14px; line-height: 1.42857143; border-radius: 4px; color: #fff;}
+.edit{ background-color: #4e87f0;}
+.delete{ background-color: #d9534f;}
+.addToMyBooks{ background-color: green; display: inline; }
+.updateMyBook{ background-color: green; display: inline; }
+.addToBooksToBuy{ background-color: green; display: inline; }
+.updateBookToBuy{ background-color: green; display: inline; }
+#search{ background-color: green; display: block; }
+
+/* Styling the description in the search tab */
+.description {text-align:justify}
+
+
+
+/* start of tabs style */
+
+/* Set height of body and the document to 100% to enable "full page tabs" */
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial;
+  }
+
+  /* Style the background color behind the tab buttons */
+  #tabButtons{background-color: rgba(255, 187, 0, 0.712);}
+
+  /* Style tab links */
+  .tablink {
+    background-color: #555;
+    color: white;
+    float: center;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+  }
+  
+  .tablink:hover {
+    background-color: #777;
+  }
+  
+  /* Style the tab content (and add height:100% for full page content) */
+  .tabcontent {
+    color: white;
+    display: none;
+    padding: 100px 20px;
+  }
+  
+  /* Style the color of each tab button */
+  #myBooks {background-color: rgb(157, 167, 157);}
+  #booksToBuy {background-color: rgb(76, 175, 109);}
+  #searchForABook {background-color: rgb(124, 188, 231); display: none;}
