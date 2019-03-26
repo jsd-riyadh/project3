@@ -1,0 +1,44 @@
+{
+  "movies": [
+    {
+      "title": "Casablanca",
+      "rating": "4",
+      "id": 1
+    },
+    {
+      "title": "Star Wars: A New Hope",
+      "rating": "3",
+      "id": 2
+    },
+    {
+      "title": "Matrix",
+      "rating": "3",
+      "id": 3
+    },
+    {
+      "title": "Bambi",
+      "rating": "4",
+      "id": 4
+    },
+    {
+      "title": "Avengers",
+      "rating": "5",
+      "id": 5
+    },
+    {
+      "title": "Moonrise Kingdom",
+      "rating": "5",
+      "id": 6
+    },
+    {
+      "title": "Space Jam",
+      "rating": "4",
+      "id": 7
+    },
+    {
+      "title": "Legally Blonde",
+      "rating": "4",
+      "id": 8
+    }
+  ]
+}

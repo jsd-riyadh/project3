@@ -1,0 +1,29 @@
+{
+  "name": "tmp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "concurrently 'webpack-dev-server' 'json-server -d1200 --watch db.json'",
+    "heroku-postbuild": "webpack -p",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": "11.1.0",
+    "npm": "6.9.0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.5.2",
+    "concurrently": "^3.5.0",
+    "json-server": "^0.13.0",
+    "promise-polyfill": "^6.0.2",
+    "webpack": "^3.0.0",
+    "webpack-dev-server": "^2.5.0",
+    "whatwg-fetch": "^2.0.3"
+  }
+}
