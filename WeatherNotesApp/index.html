@@ -1,0 +1,138 @@
+
+<!DOCTYPE html>
+<html>
+<head >
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Weather Notes App!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+    <link rel="stylesheet" href="./styles/mainSheet/html5up.css" /> 
+    <link rel="stylesheet" href="./styles/mainSheet/main.css"> 
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    
+</head>
+<body id="top" dir="ltr">
+<div id="root">
+<div >
+	<header id="header">
+	<div class="mbr-overlay" style="opacity: 0.7;background-color: rgb(239, 239, 239);">
+    </div>
+		<div class="content container text-center">
+		<h1>Weather Notes App</h1>
+			
+		<form>
+			<div class="form-group">
+			 
+			<label>Add New Note for Cuurent Weather Status</label> 
+			 
+			<input autocomplete="off" class="form-control input-lg" name="note_title" id="note_title" placeholder="Enter your note title "> <br>
+			<textarea   class="form-control input-lg"  name="note_details" id="note_details" placeholder="Enter your note Details "> </textarea>
+			</div>
+			<button id="submitbtn" type="button"  >Add</button>
+		</form>
+		</div>
+	</header>
+	
+	<section id="one" class="wrapper style2 special flow">
+		<div class="container tableContent">
+	 <div class="row">
+		 <div class='container'>
+		  <div class='card temp'>
+			<div class='inner'>
+			  <!-- <div class='icon'></div> -->
+			  <div class='title'>
+				<div class='text'>TEMPERATURE</div>
+			  </div>
+			  <div class='number' id="temp"></div>
+			  <div class='measure'>CELCIUS</div>
+			</div>
+		  </div>
+			<div class='card energy'>
+			<div class='inner'>
+			  <div class='title'>
+				<div class='text'>Wind Speed</div>
+			  </div>
+			  <div class='number' id="Wind"></div>
+			  <div class='measure'>meter/sec</div>
+			</div>
+		  </div>
+  
+			<div class='card humidity'>
+			<div class='inner'>
+			  <div class='title'>
+				<div class='text'>HUMIDITY</div>
+			  </div>
+			  <div class='number' id="HUMIDITY"></div>
+			  <div class='measure'>%</div>
+			</div>
+  </div>
+</div>
+</div>
+
+	</div>
+	<br>
+	<header class="major"><h2>Let's Check Your Weather Notes!</h2></header> 
+	 <br>
+	<div class="container tableContent">
+	 <div class="sam"></div>
+	 <form style="display:none;" id="UpdatingForm">
+			<div class="form-group">
+			<label>Update Existing Note</label>
+			
+			<input type="hidden" id="Unote_id" >
+			<input type="hidden" id="Unote_temp" >
+			<input type="hidden" id="Unote_wind" >
+			<input type="hidden" id="Unote_humidity" >
+			<input type="hidden" id="Unote_date" >
+			
+			Title <input autocomplete="off" class="form-control input-lg" name="Unote_title" id="Unote_title" placeholder="Enter your note title "> <br>
+			Details <textarea   class="form-control input-lg"  name="Unote_details" id="Unote_details" placeholder="Enter your note Details ..."> </textarea>
+			</div>
+			<button id="updatebtn" type="button"  >Update</button>
+			<button id="closebtn" type="button"  >Close</button>
+			<br>
+		</form>
+		
+	  <table id="tbl_Notes_list" border="1">
+		  <tr>
+			
+			<th>Title</th>
+			<th>Description</th>
+			<th>Temperature</th>
+			<th>Wind Speed</th>
+			<th>Humidity</th>
+			<th>Date</th>
+			<th>Delete?</th>
+			<th>Update?</th>
+		  </tr>
+	 </table>
+ 
+ 
+ 
+
+ </div>
+ </div>
+</div>
+ 
+
+<script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyBhu-3Vbxxo9LiEvED-x7ErKxBEZIzlpeg",
+    authDomain: "notes-42a6b.firebaseapp.com",
+    databaseURL: "https://notes-42a6b.firebaseio.com",
+    projectId: "notes-42a6b",
+    storageBucket: "notes-42a6b.appspot.com",
+    messagingSenderId: "471974223990"
+  };
+  firebase.initializeApp(config);
+</script>
+
+    <script src="Weather.js"></script>
+	  <script src="index.js"></script>
+</body>
+</html>
