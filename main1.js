@@ -99,7 +99,7 @@ function handler(e) {
             //class name
             list.className = "gameBox"
             //add face image
-            image.src = "https://i.imgur.com/BCr69ZX.jpg"
+            image.src = "image/think.jpg"
         }
 
     }
@@ -129,10 +129,13 @@ function handler(e) {
                     e.target.src = imageClick
                     gameArray.push(imageClick)
                     clickArray.push(j)
+                    console.log(j)
+
                     if(clickArray[clickArray.length-1] == clickArray[clickArray.length-2]){
                         gameArray.pop()
                     } else if(cArray > 0){
                         flibCount += 1
+                        console.log(flibCount)
                         document.querySelector('.flib-count').textContent = flibCount
                     } 
                     if( cArray >= 0 && (gameArray[gameArray.length-1] !== gameArray[gameArray.length-2]) && gameArray.length %2 == 0){
