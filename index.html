@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <header class="txtBoxForm-container">
+
+        <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+        
+
+        <img src="https://i.ibb.co/6vnyTGT/Moleskine-Blank-01-1.png" alt="Wikipedia Logo">
+
+        <form class="textForm">
+
+            <input type="txt" class="textForm-input">
+            <button id="subBtn" type="submit" class="icon submitIcon">
+                <img src="https://i.ibb.co/K6CWBnL/edit-2.png" alt="Magnifying Glass Icon">
+            </button>
+
+        </form>
+
+    </header>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>project 3</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="main.js"></script>
+</head>
+<section class="searchResults"></section>
+
+<body>
+    <div class="liftSide">
+        <p id="log"></p>
+    </div>
+
+
+   
+      
+      <!-- The Modal -->
+      <div class="modal" id="myModal">
+        <div class="modal-dialog">
+          <div class="modal-content">
+      
+            <!-- Modal Header -->
+            <div class="modal-header">
+              <h4 class="modal-title overflow-title ellipsis">Modal Heading</h4>
+              <button type="button" class="close" data-dismiss="modal">&times;</button>
+            </div>
+      
+            <!-- Modal body -->
+            <div class="modal-body">
+            </div>
+      
+            <!-- Modal footer -->
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+            </div>
+      
+          </div>
+        </div>
+      </div>
+
+    <div class="jaafar"></div>
+
+    <div id="subDiv"></div>
+<div class="container">
+
+    <div class="res-container"></div>
+</div>
+    
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCpSnCk7hgnxmuhz-d2PrLIo150T1ptRgA",
+            authDomain: "projectz7.firebaseapp.com",
+            databaseURL: "https://projectz7.firebaseio.com",
+            projectId: "projectz7",
+            storageBucket: "projectz7.appspot.com",
+            messagingSenderId: "444983521724"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+</body>
+
+</html>
