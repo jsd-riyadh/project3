@@ -129,7 +129,7 @@ const collectionOfImage = document.querySelector('#imageCollection')
 cashMemoryPerformance(gameLevel)
 ```
 
-Here the mechanisem of check maching images and count the flibs till finish the games
+Here the mechanisem of check maching images and count the flips till finish the games
 ```sh
  $(() => { // get images based on selected type of animal
         $.ajax(settings).done(function (response) {
@@ -185,7 +185,7 @@ Here the mechanisem of check maching images and count the flibs till finish the 
 here the image mach from API (need wait when click till image come dueto time to get image through API)
 ![N|Solid](https://i.imgur.com/S1L9g3T.png)
 
-When press on (show chart) button will get the chart for your flibs did till finish the game
+When press on (show chart) button will get the chart for your flips did till finish the game
 ![N|Solid](https://i.imgur.com/B60ssNx.png)
 
 Here function to create dropdown for date play the game or your practice
@@ -201,7 +201,7 @@ let dateList = function(countLength, dateUnique){
 }
 ```
 ![N|Solid](https://i.imgur.com/mrLRJyD.png)
-when select the data will get the table of all flibs got it during that date
+when select the data will get the table of all flips got it during that date
 ![N|Solid](https://i.imgur.com/39zpzcv.png)
 
 ```sh
@@ -233,7 +233,7 @@ document.querySelector('.chartPerformance').addEventListener('click', e => {//he
 when press the (show chart) button will change to (show game) button
 the code next button for chart to control it based on level of game
 
-Here to create the table and present the date and total flibs till complete the game
+Here to create the table and present the date and total flips till complete the game
 ```sh
 dateList(count.length, uniqueDate)
             let flibsList = document.querySelector('#flibsCollectoin')
