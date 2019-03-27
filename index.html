@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>LRDB</title>
+    <link rel="stylesheet" href="main.css" media="screen" charset="utf-8">
+</head>
+
+<body>
+    <header>
+        <br />
+        <h1>LRDB</h1>
+        <h3>London Restaurants Ratings Database</h3>
+        <h2>Good Food Make Everything Greate :)</h2>
+        <ul>
+            <li><a href="#" id="explore">Explore Restaurants</a></li>
+            <li><a href="#" id="lrdb">LRDB Rating</a></li>
+            <li><a href="#" id="blockchain">Blockchain Rating</a></li>
+        </ul>
+    </header>
+    <img class="loader" src="https://blog.teamtreehouse.com/wp-content/uploads/2015/05/InternetSlowdown_Day.gif"
+        alt="centered image" />
+    <section id="main" class="article"></section>
+    <section id="main2" class="article"></section>
+    <section class="article"><a href="#" id="show_more">
+            <h2>Show More</h2>
+        </a></section>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyB-OuXYhfHMswuoTapvHKRgD3HYA1aHClU",
+            authDomain: "crud-66fda.firebaseapp.com",
+            databaseURL: "https://crud-66fda.firebaseio.com",
+            projectId: "crud-66fda",
+            storageBucket: "crud-66fda.appspot.com",
+            messagingSenderId: "916516129793"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="app.js"></script>
+</body>
+
+</html>
