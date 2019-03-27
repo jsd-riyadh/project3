@@ -1,0 +1,73 @@
+header {
+    text-align: center;
+    background: url('https://www.tourismvictoria.com/sites/default/files/eat-and-drink-restaurants-and-cafes-rebar.jpg');
+    background-size: cover;
+    color: 2F4F4F ;
+  }
+  a {
+    color: white;
+  }
+  h1 {
+    font-size: 70px;
+  }
+  h2{
+    color: black;
+    text-align: center;
+  }
+  h3{
+      color: black;
+  }
+  img {
+    border-radius: 8px;
+    width: 500px;
+    height: 350px;
+  }
+  .loader{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  ul {
+    padding: 10px;
+    background: rgba(0,0,0,0.5);
+  }
+  li {
+    display: inline;
+    color: white;
+    padding: 0px 10px 0px 10px;
+  }
+  article {
+    max-width: 500px;
+    padding: 20px;
+    margin: 0 auto;
+  }
+  button{
+    background: navy;
+    color: white;
+    border: 0;
+    padding: 5px 5px 5px 5px;
+    }
+  input[type=text] {
+        width: 100%;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+  .clearfix:before,
+  .clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+  @media (max-width: 500px) {
+    h1 {
+      font-size: 36px;
+      padding: 5px;
+    }
+    li {
+      padding: 5px;
+      display: block;
+    }
+  }
