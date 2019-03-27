@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase-firestore.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Your Memory Performance</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    
+</head>
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <div class="container">
+            <h1>⚡️ Cash Memory Performance</h1>
+            <header>
+                <div class="memory-btn">
+                    <button class="cash-memory">Start Game</button>
+                    <button class="chartPerformance">Show Chart</button>
+                </div>
+                <select class="dropDown">
+                    <option value="cat" class="cat">Cat</option>
+                    <option value="dog" class="dog">Dog</option>
+                    </select>
+                <div class="flip-count">
+                    <p>Filb count: <span class="flib-count">0</span></p>
+                </div>
+            </header>
+            <ul id="imageCollection">
+
+            </ul>
+            <div id="chart" class="disableChart"></div>
+            <div class="radioLevel">
+                <label for="">Easy
+                    <input type="radio" name="level" value="easy" id="easy" checked>
+                </label>
+                <label for="">Midium
+                        <input type="radio" name="level" value="midium" id="midium">
+                </label>
+                <label for="">Hard
+                        <input type="radio" name="level" value="hard" id="hard">
+                </label> 
+            </div>
+            <div>
+                
+                <select class="dropDown2">
+                </select>
+                <button id="dateFlibsList">List Flibs</button>
+            </div>
+            <ul id="flibsCollectoin">
+
+            </ul>
+    </div>
+    
+   
+
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyByo7gcCYMzA2SbN-MbCcc1HKLVQ7vJ1_A",
+        authDomain: "memoryperformance.firebaseapp.com",
+        databaseURL: "https://memoryperformance.firebaseio.com",
+        projectId: "memoryperformance",
+        storageBucket: "memoryperformance.appspot.com",
+        messagingSenderId: "766316383812"
+    };
+    firebase.initializeApp(config);
+    const db = firebase.firestore()
+    db.settings({ timestampsInSnapshots: true});
+    </script>
+    <script src="main1.js"></script>
+    
+</body>
+</html>

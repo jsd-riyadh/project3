@@ -1,0 +1,157 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+.container {
+    width: 70%;
+    margin: auto;
+    text-align: center;
+  }
+
+body {
+    background-color: #393E46;
+  }
+
+h1 {
+    margin: 30px;
+    font-family: 'Lobster', cursive;
+    text-shadow: 5px 0 #232931;
+    font-size: 4rem;
+    color: #4ECCA3;
+  }
+
+  h2 {
+      height: 200px;
+      margin-top: 15%;
+      color: white;
+  }
+  .disableGame{
+      display: none !important;
+  }
+  .disableChart{
+      display: none;
+  }
+
+.game-container{
+    height: 600px;
+    display: flex;
+}
+.dropDown{
+    width: 100px;
+}
+.animalType {
+    /* font-size: 4rem; */
+}
+[class*="gameBox"]{
+    flex-basis: 25%;
+    height: 25%;
+    margin-left: 4%;
+}
+
+ #imageCollection{
+    /* border: 2px dashed red; */
+    display: flex;
+    max-width: 1400px;
+    margin: 0 auto;
+    list-style: none;
+    flex-flow: row wrap;
+    min-height: 1px;
+    justify-content: center;
+}
+li{
+    /* order: 4; */
+    /* border: 5px dashed blue; */
+    /* flex-basis: 20%; */
+    height: 30%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+#dateFlibsList{
+    /* width: 200px; */
+}
+
+button{
+    border: 0;
+    background: #fff;
+    border-radius: 10px;
+    padding: 13px;
+    width: 14%;
+    box-shadow: -1px 0px 1px rgba(0,0,0,0.1);
+    font-weight: bold;
+    font-family: ubuntu;
+    letter-spacing: 1px;
+    color: #999;
+}
+
+p{
+    color: white;
+}
+#flibsCollectoin{
+    list-style-type: none;
+    padding: 0;
+}
+
+.dateAndFlibs{
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    height: 46px;
+    text-align: left;
+}
+
+.dateAndFlibs:nth-child(even){
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+.dateAndFlibs span{
+    display: block;
+}
+
+.dateAndFlibs span:nth-child(2){
+    font-size: 16px;
+    margin-top: 6px;
+    color: #999;
+}
+
+.dateAndFlibs div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255,255,255,0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}
+
+label{
+    margin : 10px;
+    color: white;
+}
+.radioLevel{
+    margin: 15px;
+}
+/* Mobile Landscape Screen Sizes and Desktop */
+@media only screen and (min-width: 480px)  {
+    [class*="gameBox"]{
+        flex-basis: 20%;
+        align-self: auto;
+        /* height: 20%; */
+        background-color: radial-gradient(#cdffeb , #ffaaaa);
+        margin-left: 4%;
+    }
+}
+
+
+
