@@ -1,0 +1,31 @@
+
+#map {
+  height: 400px;
+  width: 100%;
+}
+
+.formcontainer {
+  float: right;
+  width: 40%;
+}
+
+.list {
+  float: right;
+  width: 60%;
+}
+
+#title{
+    font-family: 'Courier New', Courier, monospace;
+    color: darkcyan;
+    font-weight: 600;
+}
+h3, h4{
+    font-family: 'Courier New', Courier, monospace;
+    color: darkcyan;
+}
+
+label, thead{
+    color: #046767;
+}
+
+

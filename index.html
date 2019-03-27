@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>My Bucket List Map</title>
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <link rel="stylesheet" type="text/css" media="screen" href="style.css">
+
+  <script src="app.js"></script>
+  <script src="functions.js"></script>
+</head>
+
+<body>
+  <div class="container">
+    <!-- header -->
+    <div class="page-header">
+      <h1 id="title">My Bucket List Map</h1>
+    </div>
+
+    <!-- map view -->
+    <div class="jumbotron" id="map"></div>
+    <!-- Add Place-->
+    <div class="formcontainer jumbotron form-horizontal">
+      <h3>Enter Your New Location</h3>
+      <label class=" control-label">Place Name</label>
+      <input type="text" name="name" placeholder="name of place" class="form-control">
+      <label class=" control-label">Latitude</label>
+      <input type="number" name="lat" placeholder="20.774265" class="form-control">
+      <label class="control-label">Longitude</label>
+      <input type="number" name="long" placeholder="46.738586" class="form-control">
+      <br />
+      <button class="submit  btn btn-success">Submit</button>
+    </div>
+
+
+    <!-- List of Places -->
+    <div class="list">
+      <h3>My Bucket List</h3>
+      <table style="width:80%" class="table table-striped table-hover">
+        <thead>
+          <tr>
+            <th>Place Name</th>
+            <th>Lat</th>
+            <th>Long</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody class="list-data ">
+        </tbody>
+
+      </table>
+
+    </div>
+  </div>
+
+
+  <!-- Initialize map -->
+  <script async defer
+    src=" https://maps.googleapis.com/maps/api/js?key=AIzaSyC0h5HkJZxam_MzLMpvPlHWkwmZ7cFxNAs&callback=initMap">
+    </script>
+  <!-- firebase -->
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js">
+  </script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDb-8GYwuJ9S0rggqv48jFrfIaui7maThc",
+      authDomain: "ga-js-project-1553524924092.firebaseapp.com",
+      databaseURL: "https://ga-js-project-1553524924092.firebaseio.com",
+      projectId: "ga-js-project-1553524924092",
+      storageBucket: "ga-js-project-1553524924092.appspot.com",
+      messagingSenderId: "1068490255402"
+    };
+    firebase.initializeApp(config);
+  </script>
+  <!-- bootstrap -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
