@@ -1,26 +1,12 @@
-// const url = ('/api/movies');
-import url from '../db.json';//import json file
-
-console.log(url.movies) //check contents
-
+const url = ('/api/movies');
 
 //RETURNS MOVIE DATABASE AS JSON //
 const getMovies = () => {
-  // return fetch(url.movies)
-
-  //   .then(response => response.json());
-  //since you want to return a promise
-  //i created a promise(as i thought in class)
-  //returned it to the part of the code that needs it
-  return new Promise((resolve, reject)=>{
-    if(true){
-      resolve(url.movies)
-    }else{
-      reject("error")
-    }
-    
-  })
+  console.log(url)
+  return fetch(url)
+    .then(response => response.json());
 };
+
 
 //ADD MOVIE TO DATABASE
 const addMovie = () => {

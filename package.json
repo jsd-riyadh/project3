@@ -3,7 +3,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "start": "concurrently 'webpack-dev-server' 'json-server -d1200 --watch db.json'",
+    "dev": "'webpack-dev-server'",
+    "start" :"concurrently \"npm run mock\" \"npm run dev\"",
+    "mock": "json-server --watch db.json --port 5000",
     "heroku-postbuild": "webpack -p",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

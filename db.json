@@ -1,21 +1,6 @@
 {
   "movies": [
     {
-      "title": "Casablanca",
-      "rating": "4",
-      "id": 1
-    },
-    {
-      "title": "Star Wars: A New Hope",
-      "rating": "3",
-      "id": 2
-    },
-    {
-      "title": "Matrix",
-      "rating": "3",
-      "id": 3
-    },
-    {
       "title": "Bambi",
       "rating": "4",
       "id": 4
@@ -26,19 +11,49 @@
       "id": 5
     },
     {
-      "title": "Moonrise Kingdom",
-      "rating": "5",
-      "id": 6
+      "title": "home alone",
+      "rating": "3",
+      "id": 9
     },
     {
-      "title": "Space Jam",
-      "rating": "4",
-      "id": 7
+      "title": "spaiderman",
+      "rating": "1",
+      "id": 10
     },
     {
-      "title": "Legally Blonde",
+      "title": "The Amazing Spider-Man",
       "rating": "4",
-      "id": 8
+      "id": 11
+    },
+    {
+      "title": "A Quiet Place",
+      "rating": "3",
+      "id": 13
+    },
+    {
+      "title": "Captain Marvel",
+      "rating": "3",
+      "id": 14
+    },
+    {
+      "title": "Captain America: Civil War",
+      "rating": "3",
+      "id": 15
+    },
+    {
+      "title": "The Avengers",
+      "rating": "4",
+      "id": 16
+    },
+    {
+      "title": "Silver Linings Playbook",
+      "rating": "4",
+      "id": 17
+    },
+    {
+      "title": "Black Panther ",
+      "rating": "4",
+      "id": 18
     }
   ]
 }
