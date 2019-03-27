@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Who is here?</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="./main.css">
+</head>
+
+<body>
+
+    <div id="update_form" class="update">
+        <input type="text" name="username" id="username_update">
+        <button id="update_button">Update location</button>
+    </div>
+    <div id="refresh">
+        <button id="refresh_button" type="button">refresh</button>
+    </div>
+
+    <!--  -->
+    <h1>Online</h1>
+
+    <ul id="list">
+
+    </ul>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyApM_fEmwpkUQw19i45OOQV5c88J0pDw_o",
+            authDomain: "locationi.firebaseapp.com",
+            databaseURL: "https://locationi.firebaseio.com",
+            projectId: "locationi",
+            storageBucket: "locationi.appspot.com",
+            messagingSenderId: "667902468723"
+        };
+        firebase.initializeApp(config);
+    </script>
+    <script src="./db.js"></script>
+    <script src="./helper.js"></script>
+    <script src="./main.js"></script>
+
+</body>
+
+</html>
