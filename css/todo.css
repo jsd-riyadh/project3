@@ -1,0 +1,222 @@
+
+#todo_list_header{
+    width: 100%;
+    height: 80px;
+    padding: 15px;
+    background: rgb(99,157,192);
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    top: 0;
+    left: 0;
+    z-index: 5;
+}
+
+#todo_list_header header input {
+    width: 100%;
+    height: 50px;
+    float: left;
+    color: #000;
+    font-size: 15px;
+    font-weight: 400;
+    text-indent: 18px;
+    padding: 0 60px 0 0;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px 25px 25px 5px;
+    border: 0px;
+    box-shadow: none;
+    outline: none;  
+}
+
+#todo_list_header header button{
+    width: 80px;
+    height: 50px;
+    position:absolute;
+    border-radius: 5px 25px 25px 5px;
+    right:15px;
+    z-index:2;
+    background:rgb(63,99,171);
+    color: #ffffff;
+    border:none;
+} 
+
+#todo_list_header header button:hover{
+    background: #7083cb;
+}
+
+ .not_completed{
+    /* position: relative; */
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    background: rgb(63,99,171);
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    top: 0;
+    z-index: 5;
+    margin-bottom: .5rem;
+    margin-top:.5rem;
+}
+
+.not_completed:hover{
+    background-color: #7fffd4;;
+    color:black;
+}
+
+#undone_cards{
+  width: 100%;
+}
+
+#done_cards{
+  width: 100%;
+}
+
+  .completed{
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 50px;
+    padding: 15px;
+    background: rgb(63,99,171);
+    box-shadow: 0px 2px 4px rgba(44, 62, 80, 0.15);
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    top: 0;
+    z-index: 5;
+  }
+
+  .completed:hover{
+    background-color: #ca4646;
+    color:black;
+  }
+
+.undone{
+    position: relative;
+    border-radius:20%;
+    border:none; 
+}
+
+.done{
+    position: relative;
+    background-color: #ca4646;
+    border-radius: 20%;
+    border:none;
+}
+
+.trash{
+    border-radius: 50%;
+    border:none; 
+    background-color:transparent;  
+}
+
+.trash:hover{  
+    color:#ca4646;
+}
+
+.check{
+    border-radius: 50%;
+    border:none;
+    background-color: transparent;
+}
+
+.check:hover{
+    color:green;
+    background:transparent;
+}
+
+.right{
+    border-radius: 50%;
+    border:none;
+    background-color: transparent;
+}
+
+.right:hover{
+  background-color: transparent;
+  color:#d9534f;
+}
+
+.left{
+    border-radius: 50%;
+    border:none;
+    background-color: transparent;
+}
+
+.left:hover{
+  background-color: transparent;
+  color:#d9534f;
+}
+
+.cards{
+  width: 25%;
+}
+
+.completed_cards{
+  width:100%;
+}
+
+.completed_cards ul{
+    list-style-type: none;
+    left: 0;
+    margin: 0;
+}
+
+.completed_cards ul li{
+  float: left;
+  width:25%;
+  padding: .5rem;
+}
+
+.cards ul {
+    list-style-type: none;
+    left: 0;
+    margin: 0;
+    padding: .5rem;
+}
+
+.list li{
+  width:100%;
+  padding-top:1rem;
+  padding-bottom: 1rem;
+
+}
+
+.list_title{
+  width:100%;
+  height: 50px;
+  text-align: center;
+  border-bottom-right-radius:50%;
+  border-bottom-left-radius: 50%;
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  font-size: 1.5em;
+  padding: .5rem;
+}
+#Not_importent_list{
+  background-color: #5cb85c;
+}
+#Not_importent li .undone{
+  background-color: #5cb85c;
+}
+#Urgent_list{
+  background-color: #5bc0de;
+}
+#Urgent li .undone{
+  background-color: #5bc0de;
+}
+#importent_list{
+  background-color: #f0ad4e;
+}
+#Importent li .undone{
+  background-color: #f0ad4e;
+}
+
+#Critical_list{
+  background-color: #d9534f;
+}
+#Critical li .undone{
+  background-color: #d9534f;
+}
+
+#completed_tasks li .undone{
+  background-color: #C0C0C0;
+}
