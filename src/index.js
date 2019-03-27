@@ -1,5 +1,5 @@
 ///IMPORT FUNCTIONS FROM API.JS ////
-import movies from '../src/api';
+import movies from './api';
 
 movies.renderMovies();
 
@@ -24,4 +24,17 @@ $("#delete").on("click", function(){
     $('#delete-mov-title').html('');
     movies.renderDeletePills();
 });
+
+//DELETE MOVIE BUTTON MODAL //
+$(".delete-modal").on("click", ".badge",function(){
+    $(this).toggleClass("active");
+    let id = $(this).attr('id')
+
+    //delete movie
+    $("#del-mov-btn").on("click", function(){
+        movies.removeMovie(id);
+    });
+});
+
+
 

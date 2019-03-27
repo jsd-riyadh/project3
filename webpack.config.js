@@ -43,7 +43,7 @@ module.exports = {
     // send requests that start with "/api" to our api server
     proxy: {
       '/api': {
-        target: 'http://localhost:5000',
+        target: 'http://localhost:3000',
         pathRewrite: {'^/api': ''}
       }
     }

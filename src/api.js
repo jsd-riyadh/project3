@@ -1,4 +1,6 @@
+
 const url = ('/api/movies');
+
 
 //RETURNS MOVIE DATABASE AS JSON //
 const getMovies = () => {
