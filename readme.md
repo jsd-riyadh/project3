@@ -3,7 +3,8 @@ London Restaurants Ratings Database is a SPA (single page application) based on 
 
 ## LRDB Functionality 
 1. Explore restaurants located in London city from Zomato API.
-2. User can rating a restaurant.
+2. User can explore more restaurants by pressing show more button.
+3. User can rate a restaurant.
 3. User can read/update/delete their rating.
 
 ## LRDB UI
@@ -21,10 +22,10 @@ London Restaurants Ratings Database is a SPA (single page application) based on 
 ## Hosting
 * Github page"
 ```
-
+https://waldamegh.github.io/project3/
 ```
 
 * Heroku:
 ```
-
+https://lrdb.herokuapp.com/index.html
 ```
