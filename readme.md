@@ -284,4 +284,5 @@ if(crossx){
     })
 }
 ```
+Start play and test your cash memory :) and improve it :)) https://almozaai.github.io/project3/
 ### Huge thanks for Misk to give me this oportunity 
