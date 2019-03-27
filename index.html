@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <title>حجز الشاليه</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+  <!--Chems style -->
+  <!--common style-->
+  <link rel="icon" href="/assets/img/beach.png">
+  <link href="assets/fonts/icomoon/icomoon.css" rel="stylesheet">
+  <link href="assets/fonts/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/datepicker.min.css" rel="stylesheet">
+  <link href="assets/css/components.css" rel="stylesheet">
+  <link href="assets/css/main.css" rel="stylesheet">
+
+  <!-- <link href="assets/css/bootstrap.min.css" rel="stylesheet"> -->
+  <link href="assets/css/font-awesome.min.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+  <!-- <link href="assets/css/jasny-bootstrap.min.css" rel="stylesheet"> -->
+
+
+  <!--responsive style-->
+  <link href="assets/css/style-responsive.css" rel="stylesheet">
+
+
+  <link rel="stylesheet" href="https://cdn.rtlcss.com/bootstrap/v4.2.1/css/bootstrap.min.css" integrity="sha384-vus3nQHTD+5mpDiZ4rkEPlnkcyTP+49BhJ4wJeJunw06ZAp+wzzeBPUXr42fi8If"
+    crossorigin="anonymous">
+
+  <!-- Latest compiled and minified JavaScript -->
+
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" rel="stylesheet">
+
+
+  <!-- fullcalendar -->
+
+  <link href='fullcalendar/core/main.css' rel='stylesheet' />
+  <link href='fullcalendar/daygrid/main.css' rel='stylesheet' />
+
+
+  <script src='fullcalendar/core/main.js'></script>
+  <script src='fullcalendar/daygrid/main.js'></script>
+  <script src='fullcalendar/core/locales/ar-sa.js'></script>
+  <script src='fullcalendar/interactions/main.js'></script>
+  <!-- fullcalendar -->
+  <!-- moment js  -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+  <script src="assets/js/moment-hijri.js"></script>
+
+
+  <!--datepicker-->
+  <!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+  <script type="text/javascript" src="assets/js/hijri/js/jquery.calendars.js"></script>
+  <script type="text/javascript" src="assets/js/hijri/js/jquery.calendars-ar.js"></script>
+
+  <script type="text/javascript" src="assets/js/hijri/js/jquery.calendars.plus.js"></script>
+
+  <script type="text/javascript" src="assets/js/hijri/js/jquery.calendars.islamic.js"></script>
+  <script type="text/javascript" src="assets/js/hijri/js/jquery.calendars.islamic-ar.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="assets/js/hijri/css/jquery.calendars.picker.css">
+  <script type="text/javascript" src="assets/js/hijri/js/jquery.plugin.js"></script>
+  <script type="text/javascript" src="assets/js/hijri/js/jquery.calendars.picker.js"></script>
+  <script type="text/javascript" src="assets/js/hijri/js/jquery.calendars.picker-ar.js"></script>
+
+  <script src="https://cdn.rtlcss.com/bootstrap/v4.2.1/js/bootstrap.min.js" integrity="sha384-a9xOd0rz8w0J8zqj1qJic7GPFfyMfoiuDjC9rqXlVOcGO/dmRqzMn34gZYDTel8k"
+    crossorigin="anonymous"></script>
+  <!-- DrkSky API -->
+  <script type="text/javascript" src="darksky.js"></script>
+
+
+  <link href="main.css" rel="stylesheet">
+
+
+</head>
+
+<body class="rtl ">
+  <div class=" main-bg align-items-center d-flex flex-column justify-content-center">
+    <div class="content ">
+      <div class="content-header flex-column text-center  mb-3" style="
+      position: relative;
+  ">
+        <h2 class="p-3 ml-auto" hover="" title="Summary of bookings"> ملخص الحجوزات </h2>
+        <div class="row justify-content-center mb-n3 ">
+          <button type="button" id="remove-table" class="btn btn-info  mx-2"><i class="fa fa-calendar" aria-hidden="true"></i></button>
+          <button type="button" id="remove-calender" class="btn btn-info  mx-2 "><i class="fa fa-tachometer"
+              aria-hidden="true"></i></button>
+          <!-- <button type="button" id="weather" class="btn btn-primary  mx-2 "><i class="fa fa-bolt" aria-hidden="true"></i></button> -->
+        </div>
+      </div>
+
+      <br>
+
+      <div class="container">
+        <!-- Button trigger modal -->
+        <button type="button" id="book" class="btn btn-primary w-100" data-toggle="modal" data-target="#popUp" title="book the chalet">
+          حجز الاستراحة
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="popUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+          aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLongTitle" title="book information">بيانات الحجز</h5>
+                <button type="button" name="close" id="close" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+
+                <div class="formcontainer">
+                  <div class="row">
+                    <div class="col-sm-12">
+                      <div class="alert alert-danger booked" style="display: none" role="alert">
+                        محجوز من زماان بس تقدر تتواصل مع <span class="booker-name" style="color:green; ">.......</span> يمكن غير رايه : )
+                      </div>
+                    </div>
+                    
+                    <div class="col-sm-12">
+                      <input type="text" name="name" maxlength="15" placeholder="الحجز باسم" title="name">
+                    </div>
+
+                    <div class="col-sm-12">
+                      <select type="text" name="location">
+                        <option value="الاستراحة بالكامل">الاستراحة بالكامل</option>
+                        <option value="الجزء الغربي">الجزء الغربي</option>
+                        <option value="الجزء الشرقي">الجزء الشرقي</option>
+                      </select>
+                    </div>
+
+                    <div class="col-sm-12">
+                      <input class="requierd" name="bday" autoComplete="off" id="bday" name="bday">
+                      <span class="error" title="it's booked already!">محجوز ي قلبي:(</span>
+                    </div>
+
+                    <div class="col-sm-12">
+                      <button class="confirme btn btn-primary w-100 mt-2" title="confirme">تأكيد</button>
+                    </div>
+                  </div>
+                </div>
+                <div class="done text-center">
+                  <i class="fa fa-thumbs-up"></i>
+                  <h5>تم إجراء العملية</h5>
+                </div>
+
+                <!-- DELETE CONFIRM -->
+                <div id="delet-confirm" class="hide text-center">
+                  <i class="fa fa-exclamation-circle"></i>
+                <button class="delete-confirm btn btn-info w-100 mt-2" title="delete confirme">تأكيد الحذف</button>
+</div>
+
+<!-- DELETE CONFIRM -->
+                <!-- توقعات الجو -->
+                <div id="weather" class="hide">
+                  <div id="city" class="city">
+
+                    <div class="container1">
+
+                      <div class="city-title ">
+
+                        <h4> </h4>
+                        <span title="in this date at 6 pm the weather might be">الساعة 6 المغرب في تاريخ
+                          <span id="dateI"></span>
+                           بيكون الجو في الاستراحة
+                        </span>
+
+                      </div>
+                      <!-- <hr /> -->
+                      <div class="d-flex">
+                        <div class="city-weather-temperature loader">
+                          <span class="celsius fahrenheit-btn "></span>
+                          <span class="fahrenheit celsius-btn"></span>
+                        </div>
+
+                        <div class="city-weather-description">
+                          <span id="icon"></span><br>
+                          <span id="description"></span>
+                        </div>
+                      </div>
+
+                      <div class="bottom">
+                        <div class="nav-info clearfix">
+
+
+                          <!-- </div> add-info -->
+                          <div class="text-left"> <a href="http://forecast.io" id="forio"> على ذمة Dark Sky </a></div>
+                        </div> <!-- nav-info -->
+                      </div>
+                    </div>
+                  </div> <!-- bottom -->
+                  <div class="row">
+                    <label class="col-sm-8 mt-auto" title="Do you want to arrange outdoor things?">هل تريد تجهيز الجلسة الخارجية ؟</label>
+                    <div class="col-sm-4">
+                      <select type="text" name="outdoor">
+                        <option value="نعم" title="Yes">نعم</option>
+                        <option value="لا" title="No">لا</option>
+                      </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                    <label class="col-sm-8 mt-auto" title="Do you want to arrange the swimming pool?">هل تريد تعبئة المسبح؟</label>
+                    <div class="col-sm-4">
+                      <select type="text" name="swimming">
+                        <option value="نعم" title="Yes">نعم</option>
+                        <option value="لا" title="No">لا</option>
+                      </select>
+                    </div>
+                  </div>
+
+
+                  <div class="col-sm-12">
+                    <button class="submit btn btn-primary w-100 mt-2" title="book!">احجز!</button>
+                  </div>
+                </div>
+
+                <!-- توقعات الجو -->
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+      <div class="content-container">
+
+        <div id='calendar' class="calendar" style="max-width:600px"></div>
+
+
+        <table id="table" class="table table-striped table-hover table-bordered mb-4 text-center ">
+          <thead style="width:100%">
+            <tr>
+              <th scope="col" title="name"> الحجز باسم</th>
+              <th scope="col" title="type"> نوع القسم </th>
+              <th scope="col" title="date"> التاريخ</th>
+              <th scope="col" title="actions">اجراءات</th>
+            </tr>
+          </thead>
+          <tbody id="data-grid">
+          </tbody>
+        </table>
+
+
+
+
+
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <!-- Chems JS -->
+
+
+
+
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyDc3qRNhoWCiKHHMIHPdbJuGl9LxH45g58",
+      authDomain: "crud-d8d3c.firebaseapp.com",
+      databaseURL: "https://crud-d8d3c.firebaseio.com",
+      projectId: "crud-d8d3c",
+      storageBucket: "",
+      messagingSenderId: "110584683911"
+    };
+    firebase.initializeApp(config);
+  </script>
+
+
+  <!-- 
+    <script type="text/javascript" src="assets/js/datepicker.min.js"></script>
+    <script type="text/javascript"  src="assets/js/datepicker.en.js"></script>
+
+  -->
+
+
+
+  <script src="main.js"></script>
+
+
+
+</body>
+
+</html>
