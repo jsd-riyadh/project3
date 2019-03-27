@@ -52,7 +52,7 @@ function arrayOfNumbers(b) {
         return levelArrayNumber
     }
 ```
-This function to create Array numbers based on level of game's image length then random it by shuffle function
+This function to create Array series numbers based on level of game's level and used as callback function then random it by shuffle function
 ```sh
 function shuffle(b,arrayOfNumbers) {
         a = arrayOfNumbers(b)
