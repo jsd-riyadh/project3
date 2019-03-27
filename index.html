@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Top Selling Books</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="nav" id="best_list">Best Seller Books</div><div class="nav" id="reading_list">My Reading List</div>
+    </div>
+    <select id="select">
+        <option value="hardcover-advice">Advice</option>
+          <option value="business-books">Business</option>
+          <option value="celebrities">Celebrities</option>
+          <option value="childrens-middle-grade">Childrens</option>
+          <option value="crime-and-punishment">Crime</option>
+          <option value="culture">Culture</option>
+          <option value="education">Education</option>
+          <option value="manga">Manga</option>
+          <option value="science">Science</option>
+          <option value="sports">Sports</option>
+          <option value="travel">Travel</option>
+    </select>
+    <div class="list"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+        <script>
+            var config = {
+                apiKey: "AIzaSyAtt22yiA-M6EsjPABwhP3xO4A6lU08U6c",
+                authDomain: "crud-ef241.firebaseapp.com",
+                databaseURL: "https://crud-ef241.firebaseio.com",
+                projectId: "crud-ef241",
+                storageBucket: "crud-ef241.appspot.com",
+                messagingSenderId: "478681882568"
+            };
+            firebase.initializeApp(config);
+        </script>
+                <script src="main.js"></script>
+</body>
+
+</html>
