@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://www.gstatic.com/firebasejs/5.9.0/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.8.4/firebase-firestore.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> A Bill Tracker</h1>
+
+    <div class="content">
+
+        <form id="add-bill-form">
+            <input type="text" name="name" placeholder="Bill name">
+            <input type="text" name="amount" placeholder="Bill amount">
+            <input type="date" name="date">
+            <button>Add Bill</button>
+        </form>
+        <ul id="bill-list"></ul>
+    </div>
+    
+        <script>
+          // Initialize Firebase
+          var config = {
+            apiKey: "AIzaSyC7A7MYmyTt6EHYRZPbCP6_eWlvXCV3Eos",
+            authDomain: "bill-tracker-702e6.firebaseapp.com",
+            databaseURL: "https://bill-tracker-702e6.firebaseio.com",
+            projectId: "bill-tracker-702e6",
+            storageBucket: "bill-tracker-702e6.appspot.com",
+            messagingSenderId: "86002985796"
+          };
+          firebase.initializeApp(config);
+          const db = firebase.firestore()
+          db.settings({timestampsInSnapshots: true})
+          </script>
+          <script src="App.js"></script>
+</body>
+
+</html>
