@@ -1,0 +1,64 @@
+{
+  "movies": [
+    {
+      "title": "Bambi",
+      "rating": "4",
+      "id": 4
+    },
+    {
+      "title": "Avengers",
+      "rating": "5",
+      "id": 5
+    },
+    {
+      "title": "home alone",
+      "rating": "3",
+      "id": 9
+    },
+    {
+      "title": "spaiderman",
+      "rating": "1",
+      "id": 10
+    },
+    {
+      "title": "The Amazing Spider-Man",
+      "rating": "4",
+      "id": 11
+    },
+    {
+      "title": "A Quiet Place",
+      "rating": "3",
+      "id": 13
+    },
+    {
+      "title": "Captain Marvel",
+      "rating": "3",
+      "id": 14
+    },
+    {
+      "title": "Captain America: Civil War",
+      "rating": "3",
+      "id": 15
+    },
+    {
+      "title": "The Avengers",
+      "rating": "4",
+      "id": 16
+    },
+    {
+      "title": "Silver Linings Playbook",
+      "rating": "4",
+      "id": 17
+    },
+    {
+      "title": "Black Panther ",
+      "rating": "4",
+      "id": 18
+    },
+    {
+      "title": "American Sniper",
+      "rating": "3",
+      "id": 19
+    }
+  ]
+}

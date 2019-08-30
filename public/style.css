@@ -1,0 +1,54 @@
+::-webkit-scrollbar {
+    display: none;
+}
+
+body {
+	padding: 20px;
+	margin: auto;
+    font-family: Source Sans Pro;    
+    text-align: center;
+    background-image: url("https://cdn.vox-cdn.com/thumbor/WhBtiSXd3B_c9zlrjW08KU-7_OU=/0x0:2300x1499/1200x800/filters:focal(966x566:1334x934)/cdn.vox-cdn.com/uploads/chorus_image/image/57988089/Movies_end_of_year_2017.0.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.scrolling-wrapper-flexbox {
+    margin-left: 2em;
+    -webkit-overflow-scrolling: touch;
+    display: -webkit-flex;
+    overflow-x: auto;
+    height: 37vh;
+
+}
+
+
+.card {
+    flex: 0 0 auto;
+    display: inline-block;
+    background-color: white;
+    margin-right: .5em;
+    width: 185px;
+}
+
+
+
+.custom-button {
+    padding: 15px 22px;
+	border: 20px solid black;
+    margin: 20px 5px;
+    background-color: rgba(51,51,51,0.8);
+    color: white;
+    border: 1px solid white;
+}
+
+
+h1 {
+    text-align: center;
+    color: #000000;
+    font-size: 3.0rem;
+}
+
+#pinwheel {
+    margin-left: calc(50% - 96px);
+}
