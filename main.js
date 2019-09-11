@@ -88,7 +88,7 @@ $(function () {
         $(".submit").on('click', function () {
             let title = $(`input[name=title]`).val()
 
-            $.get("http://www.omdbapi.com/?&apikey=25630984&t=" + title, function (res) {
+            $.get("https://www.omdbapi.com/?&apikey=25630984&t=" + title, function (res) {
                 $(".here").append(`<li class="listAlign">${res.Title}-${res.Year}-${res.Genre}<img class="fav" src="imges/star.png"/></li>`)
                 $(`input[name=title]`).val("")
                 $(".fav").on('click', function () {
