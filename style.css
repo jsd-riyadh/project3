@@ -1,0 +1,116 @@
+body {
+    background:url("imges/BG.jpeg");
+    background-size:cover;
+}
+div {
+  height: 200px;
+  background-size:cover;
+  background-color: rgba(255,255,255,0.5);
+  position: relative;
+  margin: 0 auto;
+  margin-top: 40px;
+  border-radius: 12px;
+  max-width:600px;
+  /* text-align: center; */
+}
+h1,h2{
+text-align: center;
+
+}
+li{
+    margin: 20px 20px;
+}
+
+h5{
+    color: black;
+    text-align: center;
+}
+h1{
+    color:whitesmoke; 
+}
+header  .list {
+    cursor:pointer;
+}
+
+/* Popup box BEGIN */
+.popUp{
+    background:rgba(0,0,0,.4);
+    cursor:pointer;
+    display:none;
+    height:100%;
+    position:fixed;
+    text-align:center;
+    top:0;
+    width:100%;
+    z-index:10000;
+    /* left: 30%; */
+    
+}
+.popUp .helper{
+    display:inline-block;
+    height:100%;
+    vertical-align:middle;
+}
+.popUp > div {
+    background-color: #fff;
+    box-shadow: 10px 10px 60px #555;
+    display: inline-block;
+    height: auto;
+    max-width: 551px;
+    min-height: 100px;
+    vertical-align: middle;
+    width: 80%;
+    position: relative;
+    border-radius: 8px;
+    padding: 15px 5%;
+}
+.popupCloseButton {
+    background-color: #fff;
+    border: 3px solid #999;
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: arial;
+    font-weight: bold;
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    font-size: 25px;
+    line-height: 30px;
+    width: 30px;
+    height: 30px;
+    text-align: center;
+}
+.popupCloseButton:hover {
+    background-color: #ccc;
+}
+
+img{
+    width: 25px;
+    height: 25px;
+    float:right;
+    margin-right: 10px;
+}
+
+ul{
+    padding: 10px;
+    text-align: left;
+}
+
+.listAlign{
+
+    text-align: left;
+    margin:25px 10px;
+}
+
+
+
+.movies ,.books ,.music{
+    height: auto;
+    min-height: 200px;
+}
+
+.delete {
+    left: 900px;
+    cursor: pointer;
+}
